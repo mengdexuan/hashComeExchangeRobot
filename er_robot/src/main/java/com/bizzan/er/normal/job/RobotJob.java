@@ -47,7 +47,6 @@ public class RobotJob {
 	
 	@Autowired
     private RestTemplate restTemplate;
-    private RestTemplate restTemplate2 = new RestTemplate();
 
 	@Autowired
 	private RobotParamService robotParamService;
@@ -83,9 +82,8 @@ public class RobotJob {
 	@Scheduled(fixedDelay = 5000)
 	public void synchronizeExchangeCenter(){
 		String serviceName = "SERVICE-EXCHANGE-TRADE";
-//        String url = "http://" + serviceName + "/monitor/engines";
-        String url = "http://10.8.28.39:6005/monitor/engines";
-        ResponseEntity<HashMap> resultStr = restTemplate2.getForEntity(url, HashMap.class);
+        String url = "http://" + serviceName + "/monitor/engines";
+        ResponseEntity<HashMap> resultStr = restTemplate.getForEntity(url, HashMap.class);
         Map<String, Integer> exchangeCenterCoins = (HashMap<String, Integer>)resultStr.getBody();
         for (Map.Entry<String, Integer> coin : exchangeCenterCoins.entrySet()) {
         	String coinName = coin.getKey();
