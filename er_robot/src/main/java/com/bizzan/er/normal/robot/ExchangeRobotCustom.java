@@ -48,12 +48,12 @@ public class ExchangeRobotCustom implements Runnable, ExchangeRobot{
 	
 	protected int uid = 1;
 	protected String sign = "987654321asdf98b";
-	protected String currenOrderURL = "http://172.17.0.15:8801/exchange/order/mockcurrentydhdnskd";
-	protected String cancelOrderURL = "http://172.17.0.15:8801/exchange/order/mockcancelydhdnskd";
+	protected String currenOrderURL = "http://10.8.28.39:8801/exchange/order/mockcurrentydhdnskd";
+	protected String cancelOrderURL = "http://10.8.28.39:8801/exchange/order/mockcancelydhdnskd";
 	protected String exchangeTYPE = "LIMIT_PRICE";
 	protected String directionSELL = "SELL";
-	protected String commitOrderURL = "http://172.17.0.15:8801/exchange/order/mockaddydhdnskd";
-	protected String plateURL = "http://172.17.0.15:8801/market/exchange-plate-mini";
+	protected String commitOrderURL = "http://10.8.28.39:8801/exchange/order/mockaddydhdnskd";
+	protected String plateURL = "http://10.8.28.39:8801/market/exchange-plate-mini";
 
 	protected Random rand = new Random();
 
